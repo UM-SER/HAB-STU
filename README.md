@@ -15,7 +15,7 @@ Please direct questions to **Dr. Haoluan Wang** at haoluan.wang@miami.edu, who m
 
 ## Data
 
-**Harmful algae cell concentration**
+**Harmful algae cell concentration (HAB)**
 
 We obtained geo-referenced HAB event data for 2019–2023 from the *Florida Fish and Wildlife Conservation Commission*. Each event records the sampling date, geographic coordinates (latitude and longitude), and the concentration of Karenia brevis (the toxic algal species responsible for red tides) reported in cells per liter. The raw data are available at
 https://geodata.myfwc.com/maps/eecd72261da2412192123f5a96c4150c/about.
@@ -24,11 +24,11 @@ Data processing involved several steps. First, we removed observations with zero
 
 **Social-infrastructure time use (STU)**
 
-We obtained the STU data from *Wang and Guo (2025)*. To measure the duration and intensity of time spent at social infrastructure places, the authors derived weekly STU patterns from *Advan Weekly Patterns* data. This dataset, based on 32 million devices across the U.S. (approximately 15% of U.S. phone users), captures weekly visit information for each point of interest. The aggregated data, ranging from census tracts to metropolitan areas, include both the total number of visits and the total visit time (minutes). The raw data are available at https://doi.org/10.1038/s41597-025-05504-9. We processed these data using `./code/XXX.XX`, which outputs `./data/STU/XXX.XX`.
+We obtained the STU data from *Wang and Guo (2025)*. To measure the duration and intensity of time spent at social infrastructure places, the authors derived weekly STU patterns from *Advan Weekly Patterns* data. This dataset, based on 32 million devices across the U.S. (approximately 15% of U.S. phone users), captures weekly visit information for each point of interest. The aggregated data, ranging from census tracts to metropolitan areas, include both the total number of visits and the total visit time (minutes). The raw data are available at https://doi.org/10.1038/s41597-025-05504-9. We applied simple filtering (filtering only the Florida coastal census tracts and the time periods falling into 2019-2023). The outputs are `./data/STU/TU_tract_Florida_2019.csv` to `./data/STU/TU_tract_Florida_2023.csv`.
 
 **Weather variables**
 
-The *gridMET* dataset from the *Climatology Lab* provides daily, high-resolution weather data (1/24° arc-degree, approximately 4 km) from 1979 to the present (Abatzoglou, 2013). For this study, we selected key weather variables, including minimum air temperature (°C), maximum air temperature (°C), precipitation (mm), wind speed (m/s), and relative humidity (%). Daily observations were aggregated to the weekly level based on the STU dataset’s week definitions, and mean values for each variable were computed for every census tract included in the analysis. The raw data are available at https://www.climatologylab.org/gridmet.html. We processed these data using `./code/XXX.XX`, which outputs `./data/Weather/Weather_Variables.csv`. 
+The *gridMET* dataset from the *Climatology Lab* provides daily, high-resolution weather data (1/24° arc-degree, approximately 4 km) from 1979 to the present (Abatzoglou, 2013). For this study, we selected key weather variables, including minimum air temperature (°C), maximum air temperature (°C), precipitation (mm), wind speed (m/s), and relative humidity (%). Daily observations were aggregated to the weekly level based on the STU dataset’s week definitions, and mean values for each variable were computed for every census tract included in the analysis. The raw data are available at https://www.climatologylab.org/gridmet.html. We processed these data using `./code/Process_gridMET_Weahter_Data.ipynb`, which outputs `./data/Weather/Weather_Variables.csv`.
 
 Finally, we used weekly STU data for 2019–2023 at the census tract level, aligned to the 2019 census tract boundaries, and matched them to the harmful algae cell concentration data and weather data, using `./code/STU_HAB_Reg.do`, which generates three analysis-ready datasets: `./data/algae_reg_1mile.dta`, `./data/algae_reg_2mile.dta` and `./data/algae_reg_3mile.dta`.
 

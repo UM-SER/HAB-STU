@@ -38,7 +38,7 @@ To further investigate the socio-demographic characteristics associated with the
 
 ## Figures
 
-Figure 1 XXXXXX
+Figure 1: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
 
 Figure 2: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
@@ -63,3 +63,15 @@ Figure S4: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 Figure S5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
 Figure S6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+
+Figure S7: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+
+Figure S8: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+
+Figure S9: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+
+Figure S10: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+
+Figure S11: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+
+Figure S12: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`

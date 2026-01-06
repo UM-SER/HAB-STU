@@ -8,7 +8,8 @@ Please direct questions to **Dr. Haoluan Wang** at haoluan.wang@miami.edu, who m
 * `data`: contains raw data and processed data used for models.
   * `data/HAB`: contains raw HAB data and processed 1, 2, and 3-mile-week-tract data.
   * `data/STU`: contains raw STU data and processed week-tract data.
-  * `data/Weather`: contains raw weather data and processed week-tract level data for temperature, precipitation, humidity, and wind speed.
+  * `data/Weather`: contains processed week-tract level data for temperature, precipitation, humidity, and wind speed.
+  * `data/Shapefile`: contains the shapefiles involved, e.g., Florida census tract boundaries.
 * `code`: contains scripts for analysis, figures, and tables
 * `figures`: contains figures and tables
 
@@ -19,7 +20,7 @@ Please direct questions to **Dr. Haoluan Wang** at haoluan.wang@miami.edu, who m
 We obtained geo-referenced HAB event data for 2019–2023 from the *Florida Fish and Wildlife Conservation Commission*. Each event records the sampling date, geographic coordinates (latitude and longitude), and the concentration of Karenia brevis (the toxic algal species responsible for red tides) reported in cells per liter. The raw data are available at
 https://geodata.myfwc.com/maps/eecd72261da2412192123f5a96c4150c/about.
 
-Data processing involved several steps. First, we removed observations with zero cell counts. Second, because most sampling sites were located in nearshore waters, we restricted our analysis to 35 coastal Florida counties. For each census tract in these counties, we used the centroid to create a 2-mile buffer and then retained all HAB events within that buffer. As robustness checks, we varied the buffer radius to 1 mile and 3 miles. Finally, we aggregated all HAB events to the tract-by-week level and computed both the average and total cell concentration (million per liter). Data are processed using `./code/XXX.R`, and this script produces `./data/HAB/XXX_2mile.csv`, `XXX_1mile.csv`, and `XXX_3mile.csv`.
+Data processing involved several steps. First, we removed observations with zero cell counts. Second, because most sampling sites were located in nearshore waters, we restricted our analysis to 35 coastal Florida counties. For each census tract in these counties, we used the centroid to create a 2-mile buffer and then retained all HAB events within that buffer. As robustness checks, we varied the buffer radius to 1 mile and 3 miles. Finally, we aggregated all HAB events to the tract-by-week level and computed both the average and total cell concentration (million per liter). Data are processed using `./code/XXX.R`, and this script produces `./data/HAB/algea_tract_1mile.dta`, `./data/HAB/algea_tract_2mile.dta`, and `./data/HAB/algea_tract_3mile.dta`.
 
 **Social-infrastructure time use (STU)**
 
@@ -27,9 +28,9 @@ We obtained the STU data from *Wang and Guo (2025)*. To measure the duration and
 
 **Weather variables**
 
-The *gridMET* dataset from the *Climatology Lab* provides daily, high-resolution weather data (1/24° arc-degree, approximately 4 km) from 1979 to the present (Abatzoglou, 2013). For this study, we selected key weather variables, including minimum air temperature (°C), maximum air temperature (°C), precipitation (mm), wind speed (m/s), and relative humidity (%). Daily observations were aggregated to the weekly level based on the STU dataset’s week definitions, and mean values for each variable were computed for every census tract included in the analysis. The raw data are available at https://www.climatologylab.org/gridmet.html. We processed these data using `./code/XXX.XX`, which outputs `./data/Weather/XXX.XX`. 
+The *gridMET* dataset from the *Climatology Lab* provides daily, high-resolution weather data (1/24° arc-degree, approximately 4 km) from 1979 to the present (Abatzoglou, 2013). For this study, we selected key weather variables, including minimum air temperature (°C), maximum air temperature (°C), precipitation (mm), wind speed (m/s), and relative humidity (%). Daily observations were aggregated to the weekly level based on the STU dataset’s week definitions, and mean values for each variable were computed for every census tract included in the analysis. The raw data are available at https://www.climatologylab.org/gridmet.html. We processed these data using `./code/XXX.XX`, which outputs `./data/Weather/Weather_Variables.csv`. 
 
-Finally, we used weekly STU data for 2019–2023 at the census tract level, aligned to the 2019 census tract boundaries, and matched them to the harmful algae cell concentration data and weather data, using `./code/XXX.XX`, which outputs `./data/algae_reg_2mile.dta`, `algae_reg_1mile.dta` and `algae_reg_3mile.dta`.
+Finally, we used weekly STU data for 2019–2023 at the census tract level, aligned to the 2019 census tract boundaries, and matched them to the harmful algae cell concentration data and weather data, using `./code/HAB_Data_Process.r`, which outputs `./data/algae_reg_1mile.dta`, `./data/algae_reg_2mile.dta` and `./data/algae_reg_3mile.dta`.
 
 **Census tract variables**
 

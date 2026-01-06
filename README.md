@@ -40,26 +40,26 @@ To further investigate the socio-demographic characteristics associated with the
 
 Figure 1 XXXXXX
 
-Figure 2: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure 2: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure 3: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure 3: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure 4: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure 4: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure 5: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure 5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure 6: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure 6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Table S1: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Table S1: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S1: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure S1: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S2: Created from `algae_reg_1mile.dta`, using `./code/Stu_Algae.R`
+Figure S2: Created from `./data/algae_reg_1mile.dta`, using `./code/STU_Algae.R`
 
-Figure S3: Created from `algae_reg_3mile.dta`, using `./code/Stu_Algae.R`
+Figure S3: Created from `./data/algae_reg_3mile.dta`, using `./code/STU_Algae.R`
 
-Figure S4: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure S4: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S5: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure S5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S6: Created from `algae_reg_2mile.dta`, using `./code/Stu_Algae.R`
+Figure S6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`

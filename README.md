@@ -50,8 +50,6 @@ Figure 5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
 Figure 6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Table S1: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
-
 Figure S1: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
 Figure S2: Created from `./data/algae_reg_1mile.dta`, using `./code/STU_Algae.R`

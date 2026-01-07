@@ -1,30 +1,29 @@
 # Harmful Algae Blooms Decrease Time Use at Social Infrastructure Places
 
-This repository contains replication code and data availability for *“Harmful Algae Blooms Decrease Time Use at Social Infrastructure Places”*.
+This repository contains replication code and data used for *“Harmful Algae Blooms Decrease Time Use at Social Infrastructure Places”*.
 Please direct questions to **Dr. Haoluan Wang** at haoluan.wang@miami.edu, who may pass them to the appropriate coauthor(s).
 
 ## Repository organization
 
 * `data`: contains raw data and processed data used for models.
-  * `data/HAB`: contains raw HAB data and processed 1, 2, and 3-mile-week-tract data.
-  * `data/STU`: contains raw STU data and processed week-tract data.
-  * `data/Weather`: contains processed week-tract level data for temperature, precipitation, humidity, and wind speed.
+  * `data/HAB`: contains raw HAB data and processed 1-, 2-, and 3-mile tract-by-week data.
+  * `data/STU`: contains raw STU data and processed tract-by-week data.
+  * `data/Weather`: contains processed tract-by-week data for temperature, precipitation, humidity, and wind speed.
   * `data/Shapefile`: contains the shapefiles involved, e.g., Florida census tract boundaries.
-* `code`: contains scripts for analysis, figures, and tables
-* `figures`: contains figures and tables
+* `code`: contains scripts for data analysis, figures, and tables.
+* `figures`: contains figures.
 
 ## Data
 
-**Harmful algae cell concentration (HAB)**
+**Harmful algae cell concentration**
 
-We obtained geo-referenced HAB event data for 2019–2023 from the *Florida Fish and Wildlife Conservation Commission*. Each event records the sampling date, geographic coordinates (latitude and longitude), and the concentration of Karenia brevis (the toxic algal species responsible for red tides) reported in cells per liter. The raw data are available at
-https://geodata.myfwc.com/maps/eecd72261da2412192123f5a96c4150c/about.
+We obtained geo-referenced harmful algae bloom (HAB) event data for 2019–2023 from the *Florida Fish and Wildlife Conservation Commission*. Each event records the sampling date, geographic coordinates (latitude and longitude), and the concentration of Karenia brevis (the toxic algal species responsible for red tides) reported in cells per liter. The raw data are available at https://geodata.myfwc.com/maps/eecd72261da2412192123f5a96c4150c/about.
 
 Data processing involved several steps. First, we removed observations with zero cell counts. Second, because most sampling sites were located in nearshore waters, we restricted our analysis to 35 coastal Florida counties. For each census tract in these counties, we used the centroid to create a 2-mile buffer and then retained all HAB events within that buffer. As robustness checks, we varied the buffer radius to 1 mile and 3 miles. Finally, we aggregated all HAB events to the tract-by-week level and computed both the average and total cell concentration (million per liter). Data are processed using `./code/HAB_Data_Process.R`, and this script produces `./data/HAB/algea_tract_1mile.dta`, `./data/HAB/algea_tract_2mile.dta`, and `./data/HAB/algea_tract_3mile.dta`.
 
-**Social-infrastructure time use (STU)**
+**Social-infrastructure time use**
 
-We obtained the STU data from *Wang and Guo (2025)*. To measure the duration and intensity of time spent at social infrastructure places, the authors derived weekly STU patterns from *Advan Weekly Patterns* data. This dataset, based on 32 million devices across the U.S. (approximately 15% of U.S. phone users), captures weekly visit information for each point of interest. The aggregated data, ranging from census tracts to metropolitan areas, include both the total number of visits and the total visit time (minutes). The raw data are available at https://doi.org/10.1038/s41597-025-05504-9. We applied simple filtering (filtering only the Florida coastal census tracts and the time periods falling into 2019-2023). The outputs are `./data/STU/TU_tract_Florida_2019.csv` to `./data/STU/TU_tract_Florida_2023.csv`.
+We obtained the social-infrastructure time use (STU) data from *Wang and Guo (2025)*. To measure the duration and intensity of time spent at social infrastructure places, the authors derived weekly STU patterns from *Advan Weekly Patterns* data. This dataset, based on 32 million devices across the U.S. (approximately 15% of U.S. phone users), captures weekly visit information for each point of interest. The aggregated data, ranging from census tracts to metropolitan areas, include both the total number of visits and the total visit time (minutes). The raw data are available at https://doi.org/10.1038/s41597-025-05504-9. We applied simple filtering (filtering only the Florida coastal census tracts and the time periods falling into 2019-2023). The outputs are `./data/STU/TU_tract_Florida_2019.csv` to `./data/STU/TU_tract_Florida_2023.csv`.
 
 **Weather variables**
 

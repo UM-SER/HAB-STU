@@ -1,6 +1,6 @@
-# Harmful Algae Blooms Decrease Time Use at Social Infrastructure Places
+# Red Tides Decrease Time Use at Social Infrastructure Places
 
-This repository contains replication code and data used for *“Harmful Algae Blooms Decrease Time Use at Social Infrastructure Places”*.
+This repository contains replication code and data used for *“Red Tides Decrease Time Use at Social Infrastructure Places”*.
 Please direct questions to **Dr. Haoluan Wang** at haoluan.wang@miami.edu, who may pass them to the appropriate coauthor(s).
 
 ## Repository organization

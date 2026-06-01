@@ -47,28 +47,32 @@ Figure 4: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
 Figure 5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure 6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+Figure 6: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
 
-Figure S1: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+Figure S1: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
 
-Figure S2: Created from `./data/algae_reg_1mile.dta`, using `./code/STU_Algae.R`
+Figure S2: Created from `./data/algae_reg_1mile.dta`, using `./code/Plot_Figure.ipynb`
 
-Figure S3: Created from `./data/algae_reg_3mile.dta`, using `./code/STU_Algae.R`
+Figure S3: Created from `./data/algae_reg_3mile.dta`, using `./code/Plot_Figure.ipynb`
 
-Figure S4: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+Figure S4: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
 
-Figure S5: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+Figure S5: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
 
 Figure S6: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S7: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S7: Created from `./data/algae_reg_allcell.dta`, using `./code/STU_Algae.R`
 
-Figure S8: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S8: Created from `./data/algae_reg_allCT.dta`, using `./code/STU_Algae.R`
 
-Figure S9: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S9: Created from `./data/algae_reg_1mile.dta`, using `./code/STU_Algae.R`
 
-Figure S10: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S10: Created from `./data/algae_reg_3mile.dta`, using `./code/STU_Algae.R`
 
-Figure S11: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S11: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
 
-Figure S12: Created from `./data/algae_reg_2mile.dta`, using `./code/Plot_Figure.ipynb`
+Figure S12: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+
+Figure S13: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
+
+Figure S14: Created from `./data/algae_reg_2mile.dta`, using `./code/STU_Algae.R`
